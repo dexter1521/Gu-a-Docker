@@ -46,17 +46,26 @@ curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compo
 ```
 
 _Damos permiso de ejecucion a nuestro archivo_
-```chmod +x /usr/local/bin/docker-compose```
+```
+chmod +x /usr/local/bin/docker-compose
+```
 
 _Comprobamos la versión de Docker-compose_
-```docker-compose --version
-yum update```
+```
+docker-compose --version
+yum update
+```
 
 _Verificamos la ip de nuestro docker, segura saldra algo así 172.16.0.1 sino no la misma no te preocupes suele suceder_
-```ip a list docker0```
+```
+ip a list docker0
+```
 
 _Si queremos ver las caracteristicas de nuestro docker tiramos el  siguiente codigo_
-```docker info > dockerinfo.txt```
+
+```
+docker info > dockerinfo.txt
+```
 
 _Con esto habriamos terminado nuestra primera práctica_
 
