@@ -1,12 +1,12 @@
-Antes que nada debemos de revisar si ya contamos con una instancia de docker o docker-compose dentro de nuestro host para ello ingresamos los siguientes comandos:
+_Antes que nada debemos de revisar si ya contamos con una instancia de docker o docker-compose dentro de nuestro host para ello ingresamos los siguientes comandos:_
 
 ```
 docker --version
 docker-compose --version
 ```
 
-En caso de que exista una versión previa y que tu no hayas instalado hacemos lo siguiente, con esto estariamos desinstalando cualquier version previa de docker, 
-ojo se puede perder todo lo previo:
+_En caso de que exista una versión previa y que tu no hayas instalado hacemos lo siguiente, con esto estariamos desinstalando cualquier version previa de docker, 
+ojo se puede perder todo lo previo:_
 
 ```
 yum remove docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
