@@ -1,0 +1,51 @@
+Antes que nada debemos de revisar si ya contamos con una instancia de docker o docker-compose dentro de nuestro host para ello ingresamos los siguientes comandos:
+
+```
+docker --version
+docker-compose --version
+```
+
+En caso de que exista una versión previa y que tu no hayas instalado hacemos lo siguiente, con esto estariamos desinstalando cualquier version previa de docker, 
+ojo se puede perder todo lo previo:
+
+```
+yum remove docker docker-common docker-selinux docker-engine-selinux docker-engine docker-ce
+```
+Antes de comenzar se recomienda tener actualizado nuestro host a sus últimas versiones de soft y repos para ello tiramos los suguientes comandos
+```
+yum update
+yum upgrade
+yum install -y yum-utils net-tools nano
+```
+
+Por fin vamos a instalar Docker!
+
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+yum install docker-ce -y
+yum list docker-ce --showduplicates | sort -r
+
+recordatorio el servicio de docker hay que habilitarlo e inicializarlo para que al proximo reinicio
+se encuentre disponible de otra manera habra que hacerlo a mano blah, blah, blah!
+
+systemctl start docker
+systemctl enable docker.service
+systemctl status docker.service
+
+Comprobamos la versión de docker
+docker --version
+
+Instalamos docker-compose, hay que recordar que en este ejemplo estamos trabajando con 1.29.1 seguramente en un futuro esto cambiará
+curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+Damos permiso de ejecucion
+chmod +x /usr/local/bin/docker-compose
+
+Comprobamos la versión de Docker-compose
+docker-compose --version
+yum update
+
+Verificamos la ip de docker
+ip a list docker0
+
+Si queremos ver las caracteristicas de nuestro docker tiramos el  siguiente codigo
+docker info > dockerinfo.txt
