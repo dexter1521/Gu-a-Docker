@@ -1,2 +1,2 @@
-# Gu-a-Docker
+# Guía-Docker
 Guía básica intermedia de Docker &amp; Docker-Compose
