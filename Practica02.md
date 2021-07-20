@@ -33,3 +33,9 @@ $ docker run alpine:3.7 ls -l
 ```
 $ docker run -it alpine:3.7 sh
 ```
+
+_Ahora que ya llegaste hasta este punto, vuelve a tirar los primeros comandos y podrás ver el resultado_
+
+---
+[Dexter1521]
+
